@@ -7,7 +7,7 @@ export const ContactList = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectVisibleContacts);
 
-  // if (!contacts) return;
+  if (!contacts) return;
 
   return (
     <>

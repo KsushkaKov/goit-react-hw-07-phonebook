@@ -19,7 +19,7 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
+        minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -36,7 +36,7 @@ export const App = () => {
       {(isLoading && !error && (
         <>
           <br />
-          <b>Your request is in progress...🔃Plese wait 🕰</b>
+          <b>Your request is in progress...🔃Please wait 🕰</b>
         </>
       )) || <ContactList />}
     </div>
