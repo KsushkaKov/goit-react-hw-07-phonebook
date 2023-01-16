@@ -36,7 +36,7 @@ export const App = () => {
       {(isLoading && !error && (
         <>
           <br />
-          <b>Your request is in progress...🔃</b>
+          <b>Your request is in progress...🔃Plese wait 🕰</b>
         </>
       )) || <ContactList />}
     </div>
