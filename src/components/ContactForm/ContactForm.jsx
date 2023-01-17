@@ -2,8 +2,8 @@ import { useState } from 'react';
 import css from './ContactForm.module.css';
 import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/contact-selectors';
 
 export const ContactForm = () => {
   const contacts = useSelector(selectContacts);
@@ -28,10 +28,10 @@ export const ContactForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-
     const contactInList = contacts.some(
       contact => contact.name.toLowerCase() === name.toLowerCase()
     );
+
     if (contactInList) {
       alert(`⚠ Oops... Contact ${name} already in list!`);
       return;
